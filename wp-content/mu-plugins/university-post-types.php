@@ -1,5 +1,4 @@
 <?php 
-
     // mu-plugins, stands for 'Must Use Plugins' cannot be deactivated but is strictly being used by wordpress
     // this specific plugin will be utilized for custom posts types
     // handles custom post types
@@ -16,6 +15,6 @@
             'menu_icon' => 'dashicons-calendar',
         ));
     }
+    
     add_action('init', 'university_event_type');
-
 ?>
