@@ -17,7 +17,7 @@ while (have_posts()) {
 
     <div class="container container--narrow page-section">
         <?php
-        
+
         $parentId = wp_get_post_parent_id(get_the_ID());
 
         if ($parentId) { ?>
@@ -28,31 +28,31 @@ while (have_posts()) {
             </div>
         <?php } ?>
 
-        <?php 
+        <?php
         // handles pages that is not a parent nor child page
         $permaLink = get_pages(array('child_of' => get_the_ID()));
         if ($parentId || $permaLink) { ?>
 
-        <!-- if ($parentId) { ?> -->
+            <!-- if ($parentId) { ?> -->
 
-        <div class="page-links">
-            <h2 class="page-links__title"><a href="<?php echo get_permalink($parentId); ?>"><?php echo get_the_title($parentId); ?></a></h2>
-            <ul class="min-list">
-                <?php
-                
-                if ($parentId) {
-                    $childId = $parentId;
-                } else {
-                    $childId = get_the_ID();
-                }
+            <div class="page-links">
+                <h2 class="page-links__title"><a href="<?php echo get_permalink($parentId); ?>"><?php echo get_the_title($parentId); ?></a></h2>
+                <ul class="min-list">
+                    <?php
 
-                wp_list_pages(array(
-                    'title_li' => null,
-                    'child_of' => $childId,
-                    'sort_column' => 'menu_order'
-                )); ?>
-            </ul>
-        </div>
+                    if ($parentId) {
+                        $childId = $parentId;
+                    } else {
+                        $childId = get_the_ID();
+                    }
+
+                    wp_list_pages(array(
+                        'title_li' => null,
+                        'child_of' => $childId,
+                        'sort_column' => 'menu_order'
+                    )); ?>
+                </ul>
+            </div>
 
         <?php } ?>
 

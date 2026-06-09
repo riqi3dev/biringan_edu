@@ -14,7 +14,7 @@
                     <nav class="nav-list">
                         <?php wp_nav_menu(array(
                             'theme_location' => 'footerLocation1'
-                        ))?>
+                        )) ?>
                     </nav>
                 </div>
 
@@ -23,7 +23,7 @@
                     <nav class="nav-list">
                         <?php wp_nav_menu(array(
                             'theme_location' => 'footerLocation2'
-                        ))?>
+                        )) ?>
                     </nav>
                 </div>
             </div>

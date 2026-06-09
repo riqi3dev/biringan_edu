@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- handles language translation -->
 <html <?php language_attributes('charset'); ?>>
+
 <head>
     <!-- handles mobile friendly-ness and charset -->
     <meta charset="<?php bloginfo(); ?>">
@@ -8,6 +9,7 @@
     <?php wp_head(); ?>
 </head>
 <!-- handles page class names -->
+
 <body <?php body_class() ?>>
     <header class="site-header">
         <div class="container">
