@@ -4,17 +4,10 @@
     // handles custom post types
     function university_event_type() {
         register_post_type('event', array(
-            'supports' => array(
-                'title', 
-                'editor',
-                'excerpt'
-            ),
-            'rewrite' => array(
-                'slug' => 'events'
-            ),
+            'rewrite' => array('slug' => 'events'),
             'has_archive' => true,
             'public' => true,
-            'show_in_rest' => true, //uses modern ui because of js
+            'show_in_rest' => true,
             'labels' => array(
                 'name' => 'Events',
                 'add_new_item' => 'Add New Event',
